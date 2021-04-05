@@ -17,6 +17,12 @@ let test;
 let url2;
 let path2;
 
+app.use(express.static(__dirname + '/public'));
+
+app.get('*', function(req, res){
+res.sendFile('index.html', { root: __dirname + '/public' });
+});
+
 app.get('/go', function(req, res){
     url = req.query.url;
     url2 = req.query.url;
@@ -95,11 +101,6 @@ return;
     });
 });
 
-app.use(express.static(__dirname + '/public'));
-
-app.get('*', function(req, res){
-res.sendFile('index.html', { root: __dirname + '/public' });
-});
 config = require('./config.json'),
 PORT = config.port;
 
