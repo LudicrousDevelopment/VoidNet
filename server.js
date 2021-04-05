@@ -96,11 +96,11 @@ return;
 });
 
 app.get('/', function(req, res){
-res.sendFile('index.html', { root: __dirname + "/public" } );
+res.sendFile('index.html', { root: __dirname + '/public' });
 });
 
 config = require('./config.json'),
-app.use(express.static('public'))
+app.use(express.static('public'));
 app.use('/', router);
 const PORT = config.port;
 app.listen(PORT, () => {
