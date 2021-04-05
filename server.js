@@ -95,13 +95,14 @@ return;
     });
 });
 
-app.get('/', function(req, res){
+app.use(express.static(__dirname + '/public'));
+
+app.get('*', function(req, res){
 res.sendFile('index.html', { root: __dirname + '/public' });
 });
-
 config = require('./config.json'),
-app.use(express.static('public'));
-const PORT = config.port;
+PORT = config.port;
+
 app.listen(PORT, () => {
 console.log(`Server is Running at localhost:${ PORT }`);
 });
