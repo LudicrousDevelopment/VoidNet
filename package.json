@@ -4,12 +4,10 @@
   "description": "Web Proxy to Unblock School Sites",
   "main": "server.js",
   "scripts": {
-    "dev": "react-scripts start",
     "start": "node server.js",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "heroku-postbuild": "npm run build",
     "setup": "python sfiles/start.py",
     "stop": "process.exit(1)",
     "clear": "python sfiles/clean.py",
@@ -22,6 +20,7 @@
     "http": "0.0.1-security",
     "https": "^1.0.0",
     "node-fetch": "^2.6.1",
+    "react-scripts": "^4.0.3",
     "s": "^1.0.0",
     "serve": "^11.3.2",
     "serve-favicon": "^2.5.0"
