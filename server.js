@@ -82,15 +82,14 @@ res.setHeader("content-type", "text/html");
     } 
     }
     }
-code = code.replace(/href=".\//gi, 'href="https://voidnet.ml/go?url=' + domain + '/');
-code = code.replace(/href="(?!https:\/\/|\/)/gi, 'href="http://voidnet.ml/go?url=' + url2 + '/');
-code = code.replace(/href="\//gi, 'href="https://voidnet.ml/proxy?url=' + domain + '/');
-code = code.replace(/content="\//gi, 'content="https://voidnet.ml/go?url=' + url2 + '/');
-code = code.replace(/action="\//gi, 'content="https://voidnet.ml/go?url=' + domain + '/');
-code = code.replace(/a href="https\:\/\/www./gi, 'a href="https://voidnet.ml/go?url=');
-code = code.replace(/src="\//gi, 'src="https://voidnet.ml/go?url=' + url2 + '/');
-
-code = code.replace(/url\("\//gi, 'url("https://voidnet.ml/go?url=' + url2 + '/');
+code = code.replace(/href=".\//gi, domain + '/');
+code = code.replace(/href="(?!https:\/\/|\/)/gi, url2 + '/');
+code = code.replace(/href="\//gi, domain + '/');
+code = code.replace(/content="\//gi, 'content="' + url2 + '/');
+code = code.replace(/action="\//gi, 'content="' + domain + '/');
+code = code.replace(/a href="https\:\/\/www./gi, 'a href="');
+code = code.replace(/src="\//gi, 'src="' + url2 + '/');
+code = code.replace(/url\("\//gi, 'url("' + url2 + '/');
     res.send(code);
 return;
     });
