@@ -1,0 +1,22 @@
+{
+  "name": "VoidNet",
+  "version": "1.2.0",
+  "description": "Web Proxy to Unblock School Sites",
+  "main": "server.js",
+  "scripts": {
+    "setup": "python sfiles/start.py",
+    "start": "node server.js",
+    "stop": "process.exit(1)",
+    "clear": "python sfiles/clean.py",
+    "editsetup": "python sfiles/setup.py"
+  },
+  "author": "Void Network",
+  "dependencies": {
+    "express": "^4.17.1",
+    "fs": "0.0.1-security",
+    "http": "0.0.1-security",
+    "https": "^1.0.0",
+    "node-fetch": "^2.6.1",
+    "serve-favicon": "^2.5.0"
+  }
+}

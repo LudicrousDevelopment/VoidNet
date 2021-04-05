@@ -1,0 +1,79 @@
+      p {
+        color: white;
+      }
+      h1 {
+        color: white;
+      }
+      body {
+        text-align: center;
+      }
+      h1 {
+        text-align: center;
+        margin-bottom: 0;
+      }
+      p {
+        text-align: center;
+        font-size: 20px;
+        margin-top: 25px;
+        margin: auto;
+      }
+      div {
+        text-align: center;
+      }
+      .inputurl {
+        margin-top: 0;
+        margin-bottom: 10px;
+      }
+      body{
+        background: url(https://cdn-client.beta.sportseducationinstructors.org/attachments/817087413872230433/827590883087351868/source.png.gif?width=806&height=999)
+      }
+      .button {
+  background-color: rgb(175, 68, 149);
+  border-color: rgb(175, 68, 149);
+  border-width: 2px;
+  border-radius: 5px;
+  color: white;
+  padding: 4px 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.gobutton {
+  background-color: rgb(175, 68, 149); 
+  color: white; 
+}
+
+.gobutton:hover {
+  background-color:rgb(95, 104, 226);
+  color: white;
+}
+
+      .input {
+  background-color: rgb(175, 68, 149);
+  border-color: rgb(175, 68, 149);
+  border-width: 2px;
+  border-radius: 5px;
+  color: white;
+  padding: 4px 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.inputurl {
+  background-color: rgb(175, 68, 149); 
+  color: white; 
+}
+.inputurl::placeholder{
+  color: lightgray;
+}
+.inputurl:focus {
+  background-color: rgb(95, 104, 226)
+}
