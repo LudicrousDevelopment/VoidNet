@@ -101,7 +101,6 @@ res.sendFile('index.html', { root: __dirname + '/public' });
 
 config = require('./config.json'),
 app.use(express.static('public'));
-app.use('/', router);
 const PORT = config.port;
 app.listen(PORT, () => {
 console.log(`Server is Running at localhost:${ PORT }`);
