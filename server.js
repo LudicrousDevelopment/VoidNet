@@ -17,12 +17,6 @@ let test;
 let url2;
 let path2;
 
-app.use(express.static(__dirname + '/public'));
-
-app.get('*', function(req, res){
-res.sendFile('index.html', { root: __dirname + '/public' });
-});
-
 app.get('/go', function(req, res){
     url = req.query.url;
     url2 = req.query.url;
@@ -99,6 +93,12 @@ code = code.replace(/url\("\//gi, 'url("' + url2 + '/');
     res.send(code);
 return;
     });
+});
+
+app.use(express.static(__dirname + '/public'));
+
+app.get('/', function(req, res){
+res.sendFile('index.html', { root: __dirname + '/public' });
 });
 
 var heroku = process.env.ONHEROKU
